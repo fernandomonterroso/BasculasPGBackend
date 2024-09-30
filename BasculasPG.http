@@ -1,0 +1,6 @@
+@BasculasPG_HostAddress = http://localhost:5007
+
+GET {{BasculasPG_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
