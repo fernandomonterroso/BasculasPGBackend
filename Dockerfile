@@ -20,14 +20,8 @@ COPY . .
 RUN dotnet build -c Release
 
 # Publicar la aplicación directamente en la carpeta de trabajo actual (/src)
-RUN dotnet publish -c Release -o /src/publish
+RUN dotnet publish
 
-# Imagen final para ejecutar la aplicación
-FROM base AS final
-WORKDIR /app
-
-# Copiar todo el contenido publicado desde la etapa de construcción a la carpeta actual
-COPY --from=build /src/publish .
 
 # Configurar la aplicación para escuchar en 0.0.0.0 por el puerto 8080
 ENV ASPNETCORE_URLS=http://0.0.0.0:8080
