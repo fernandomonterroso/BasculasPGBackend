@@ -7,8 +7,7 @@ EXPOSE 8080
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
 
-# Copiar la solución y los archivos de proyecto (ambos en la misma carpeta)
-COPY *.sln ./
+# Copiar el archivo de proyecto
 COPY *.csproj ./
 
 # Restaurar dependencias
