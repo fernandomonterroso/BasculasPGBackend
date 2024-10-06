@@ -14,7 +14,7 @@ namespace BasculasPG.DataAccess
             Env.Load();
 
             // Obtener la IP del servidor desde el archivo .env
-            var serverIp = Environment.GetEnvironmentVariable("MYSQL_SERVER") ?? "127.0.0.1";
+            var serverIp = Environment.GetEnvironmentVariable("MYSQL_SERVER") ?? "0.0.0.0";
 
             // Obtener la cadena de conexión desde appsettings.json
             var baseConnectionString = configuration.GetConnectionString("mysql");
