@@ -33,4 +33,4 @@ COPY --from=build /src/publish .
 ENV ASPNETCORE_URLS=http://0.0.0.0:8080
 
 # Establecer el archivo de inicio
-ENTRYPOINT ["dotnet", "/app/publish/BasculaPG.dll"]
+ENTRYPOINT ["dotnet", "/src/bin/Release/net8.0/BasculasPG.dll"]
