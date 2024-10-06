@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Fernando\\Documents\\RepositoriosFer\\BasculasPGBackend\\BasculasPG.csproj": {}
+    "C:\\Users\\Fer\\Documents\\RepositoriosFer\\BasculasPGBackend\\BasculasPG.csproj": {}
   },
   "projects": {
-    "D:\\Fernando\\Documents\\RepositoriosFer\\BasculasPGBackend\\BasculasPG.csproj": {
+    "C:\\Users\\Fer\\Documents\\RepositoriosFer\\BasculasPGBackend\\BasculasPG.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Fernando\\Documents\\RepositoriosFer\\BasculasPGBackend\\BasculasPG.csproj",
+        "projectUniqueName": "C:\\Users\\Fer\\Documents\\RepositoriosFer\\BasculasPGBackend\\BasculasPG.csproj",
         "projectName": "BasculasPG",
-        "projectPath": "D:\\Fernando\\Documents\\RepositoriosFer\\BasculasPGBackend\\BasculasPG.csproj",
+        "projectPath": "C:\\Users\\Fer\\Documents\\RepositoriosFer\\BasculasPGBackend\\BasculasPG.csproj",
         "packagesPath": "C:\\Users\\Fer\\.nuget\\packages\\",
-        "outputPath": "D:\\Fernando\\Documents\\RepositoriosFer\\BasculasPGBackend\\obj\\",
+        "outputPath": "C:\\Users\\Fer\\Documents\\RepositoriosFer\\BasculasPGBackend\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Fer\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -86,7 +86,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.301/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

@@ -66,6 +66,7 @@ builder.Services.AddAuthentication(options =>
 builder.Services.AddScoped<MySqlConnectionFactory>();
 builder.Services.AddScoped<MySqlDbManager>();
 builder.Services.AddScoped<GeneralHandler>();
+builder.Services.AddScoped<DataHandler>();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
