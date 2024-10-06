@@ -7,12 +7,17 @@ EXPOSE 8080
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
 
-# Copiar el archivo de proyecto y restaurar las dependencias
-#COPY ["BasculaPG/BasculaPG.csproj", "BasculaPG/"]
-RUN dotnet restore "BasculaPG.csproj"
+# Copiar la solución y el proyecto, ya que están en la misma carpeta
+COPY *.sln ./
+COPY BasculaPG/*.csproj ./BasculaPG/
 
-# Copiar todos los archivos de la aplicación y compilarla
+# Restaurar las dependencias
+RUN dotnet restore
+
+# Copiar el resto de los archivos del proyecto
 COPY . .
+
+# Construir la aplicación
 WORKDIR "/src/BasculaPG"
 RUN dotnet build "BasculaPG.csproj" -c Release -o /app/build
 
