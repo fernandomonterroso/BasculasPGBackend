@@ -1,7 +1,7 @@
 # Imagen base para ASP.NET Core 8 en ejecución
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
 WORKDIR /app
-EXPOSE 8080
+EXPOSE 80
 
 # Imagen base para SDK de .NET Core 8 (para compilar y restaurar dependencias)
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
@@ -23,8 +23,8 @@ RUN dotnet build -c Release
 RUN dotnet publish
 
 
-# Configurar la aplicación para escuchar en 0.0.0.0 por el puerto 8080
-ENV ASPNETCORE_URLS=http://0.0.0.0:8080
+# Configurar la aplicación para escuchar en 0.0.0.0 por el puerto 80
+ENV ASPNETCORE_URLS=http://0.0.0.0:80
 
 # Establecer el archivo de inicio
 ENTRYPOINT ["dotnet", "/src/bin/Release/net8.0/BasculasPG.dll"]
