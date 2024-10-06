@@ -8,8 +8,8 @@ FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
 
 # Copiar el archivo de proyecto y restaurar las dependencias
-COPY ["BasculaPG/BasculaPG.csproj", "BasculaPG/"]
-RUN dotnet restore "BasculaPG/BasculaPG.csproj"
+#COPY ["BasculaPG/BasculaPG.csproj", "BasculaPG/"]
+RUN dotnet restore "BasculaPG.csproj"
 
 # Copiar todos los archivos de la aplicación y compilarla
 COPY . .
