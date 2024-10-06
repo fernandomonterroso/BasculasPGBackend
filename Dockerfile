@@ -7,29 +7,27 @@ EXPOSE 8080
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
 
-# Copiar la solución y el proyecto, ya que están en la misma carpeta
+# Copiar la solución y los archivos de proyecto (ambos en la misma carpeta)
 COPY *.sln ./
-COPY BasculaPG/*.csproj ./BasculaPG/
+COPY *.csproj ./
 
-# Restaurar las dependencias
+# Restaurar dependencias
 RUN dotnet restore
 
 # Copiar el resto de los archivos del proyecto
 COPY . .
 
-# Construir la aplicación
-WORKDIR "/src/BasculaPG"
-RUN dotnet build "BasculaPG.csproj" -c Release -o /app/build
+# Compilar la aplicación
+RUN dotnet build -c Release -o /app/build
 
 # Publicar la aplicación
-FROM build AS publish
-RUN dotnet publish "BasculaPG.csproj" -c Release -o /app/publish
+RUN dotnet publish -c Release -o /app/publish
 
-# Imagen final para ejecutar la aplicación en un entorno más ligero
+# Imagen final para ejecutar la aplicación
 FROM base AS final
 WORKDIR /app
-COPY --from=publish /app/publish .
+COPY --from=build /app/publish .
 
-# Configuración para escuchar en todos los puertos (0.0.0.0) en el puerto 8080
+# Configurar la aplicación para escuchar en 0.0.0.0 por el puerto 8080
 ENV ASPNETCORE_URLS=http://0.0.0.0:8080
 ENTRYPOINT ["dotnet", "BasculaPG.dll"]
