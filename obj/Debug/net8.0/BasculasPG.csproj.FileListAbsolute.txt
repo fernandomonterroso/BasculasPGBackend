@@ -173,3 +173,5 @@ C:\Users\Fer\Documents\RepositoriosFer\BasculasPGBackend\obj\Debug\net8.0\refint
 C:\Users\Fer\Documents\RepositoriosFer\BasculasPGBackend\obj\Debug\net8.0\BasculasPG.pdb
 C:\Users\Fer\Documents\RepositoriosFer\BasculasPGBackend\obj\Debug\net8.0\BasculasPG.genruntimeconfig.cache
 C:\Users\Fer\Documents\RepositoriosFer\BasculasPGBackend\obj\Debug\net8.0\ref\BasculasPG.dll
+C:\Users\Fer\Documents\RepositoriosFer\BasculasPGBackend\bin\Debug\net8.0\DotNetEnv.dll
+C:\Users\Fer\Documents\RepositoriosFer\BasculasPGBackend\bin\Debug\net8.0\Sprache.dll

@@ -1,5 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 using System.Data;
+using DotNetEnv;
 
 namespace BasculasPG.DataAccess
 {
@@ -9,13 +10,22 @@ namespace BasculasPG.DataAccess
 
         public MySqlConnectionFactory(IConfiguration configuration)
         {
-            // Obtiene la cadena de conexión desde el archivo appsettings.json
-            _connectionString = configuration.GetConnectionString("mysql");
+            // Cargar las variables del archivo .env
+            Env.Load();
+
+            // Obtener la IP del servidor desde el archivo .env
+            var serverIp = Environment.GetEnvironmentVariable("MYSQL_SERVER") ?? "127.0.0.1";
+
+            // Obtener la cadena de conexión desde appsettings.json
+            var baseConnectionString = configuration.GetConnectionString("mysql");
+
+            // Reemplazar la parte del servidor en la cadena de conexión
+            _connectionString = baseConnectionString.Replace("{Server}", serverIp);
         }
 
         public IDbConnection CreateConnection()
         {
-            // Retorna una conexión MySQL usando la cadena de conexión
+            // Retorna una conexión MySQL usando la cadena de conexión construida
             return new MySqlConnection(_connectionString);
         }
     }

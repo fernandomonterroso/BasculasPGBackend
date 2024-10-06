@@ -1,0 +1,15 @@
+# Ignore the .env file
+.env
+
+# Compiled object files and binaries
+/bin
+/obj
+
+# Ignore NuGet packages
+*.nupkg
+*.snupkg
+
+
+# Ignore Visual Studio temporary files
+.vs/
+.vscode/
