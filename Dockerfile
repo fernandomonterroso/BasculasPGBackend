@@ -28,3 +28,5 @@ COPY --from=publish /app/publish .
 # Configuración para escuchar en todos los puertos (0.0.0.0) en el puerto 8080
 ENV ASPNETCORE_URLS=http://0.0.0.0:8080
 ENTRYPOINT ["dotnet", "BasculaPG.dll"]
+
+
