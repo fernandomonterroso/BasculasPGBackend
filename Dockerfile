@@ -8,7 +8,7 @@ FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
 
 # Copiar el archivo de proyecto
-COPY *.csproj ./
+COPY *.csproj ./ 
 
 # Restaurar dependencias
 RUN dotnet restore
@@ -25,8 +25,12 @@ RUN dotnet publish -c Release -o /app/publish
 # Imagen final para ejecutar la aplicación
 FROM base AS final
 WORKDIR /app
+
+# Copiar los archivos publicados a la carpeta raíz del contenedor
 COPY --from=build /app/publish .
 
 # Configurar la aplicación para escuchar en 0.0.0.0 por el puerto 8080
 ENV ASPNETCORE_URLS=http://0.0.0.0:8080
+
+# Establecer el archivo de inicio
 ENTRYPOINT ["dotnet", "BasculaPG.dll"]
