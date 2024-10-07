@@ -66,6 +66,10 @@
               "target": "Package",
               "version": "[6.4.0, )"
             },
+            "System.IO.Ports": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
             "System.IdentityModel.Tokens.Jwt": {
               "target": "Package",
               "version": "[8.0.2, )"

@@ -1,5 +1,36 @@
 [
   {
+    "ContainingType": "BasculasPG.Controllers.BasculaController",
+    "Method": "GetRandomWeight",
+    "RelativePath": "api/Bascula/v1",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BasculasPG.Controllers.BasculaController",
+    "Method": "GetPeso",
+    "RelativePath": "api/Bascula/v2",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "port",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "command",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "BasculasPG.Controllers.DataController",
     "Method": "GetBasculasByBod",
     "RelativePath": "api/Data/getBasculasByBod",
@@ -10,6 +41,58 @@
       {
         "Name": "bodega_value",
         "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BasculasPG.Controllers.DataController",
+    "Method": "GetKeysGuia",
+    "RelativePath": "api/Data/getKeysGuia",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "guia",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "bodega",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BasculasPG.Controllers.DataController",
+    "Method": "GetPesos",
+    "RelativePath": "api/Data/getPesos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "corr",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "anio",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "tipo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "corelativoPeso",
+        "Type": "System.Int32",
         "IsRequired": false
       }
     ],

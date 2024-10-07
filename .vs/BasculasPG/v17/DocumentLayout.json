@@ -3,16 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\Fer\\Documents\\RepositoriosFer\\BasculasPGBackend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C3ECAE66-7F21-42CE-84E2-AAE9507E1A8F}|BasculasPG.csproj|c:\\users\\fer\\documents\\repositoriosfer\\basculaspgbackend\\dataaccess\\mysqlconnectionfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C3ECAE66-7F21-42CE-84E2-AAE9507E1A8F}|BasculasPG.csproj|solutionrelative:dataaccess\\mysqlconnectionfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C3ECAE66-7F21-42CE-84E2-AAE9507E1A8F}|BasculasPG.csproj|c:\\users\\fer\\documents\\repositoriosfer\\basculaspgbackend\\dataaccess\\mysqldbmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C3ECAE66-7F21-42CE-84E2-AAE9507E1A8F}|BasculasPG.csproj|solutionrelative:dataaccess\\mysqldbmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C3ECAE66-7F21-42CE-84E2-AAE9507E1A8F}|BasculasPG.csproj|c:\\users\\fer\\documents\\repositoriosfer\\basculaspgbackend\\controllers\\datacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3ECAE66-7F21-42CE-84E2-AAE9507E1A8F}|BasculasPG.csproj|solutionrelative:controllers\\datacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C3ECAE66-7F21-42CE-84E2-AAE9507E1A8F}|BasculasPG.csproj|c:\\users\\fer\\documents\\repositoriosfer\\basculaspgbackend\\handlers\\datahandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C3ECAE66-7F21-42CE-84E2-AAE9507E1A8F}|BasculasPG.csproj|solutionrelative:handlers\\datahandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3ECAE66-7F21-42CE-84E2-AAE9507E1A8F}|BasculasPG.csproj|c:\\users\\fer\\documents\\repositoriosfer\\basculaspgbackend\\controllers\\basculacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3ECAE66-7F21-42CE-84E2-AAE9507E1A8F}|BasculasPG.csproj|solutionrelative:controllers\\basculacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3ECAE66-7F21-42CE-84E2-AAE9507E1A8F}|BasculasPG.csproj|c:\\users\\fer\\documents\\repositoriosfer\\basculaspgbackend\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3ECAE66-7F21-42CE-84E2-AAE9507E1A8F}|BasculasPG.csproj|solutionrelative:controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3ECAE66-7F21-42CE-84E2-AAE9507E1A8F}|BasculasPG.csproj|c:\\users\\fer\\documents\\repositoriosfer\\basculaspgbackend\\models\\entities\\error.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3ECAE66-7F21-42CE-84E2-AAE9507E1A8F}|BasculasPG.csproj|solutionrelative:models\\entities\\error.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C3ECAE66-7F21-42CE-84E2-AAE9507E1A8F}|BasculasPG.csproj|c:\\users\\fer\\documents\\repositoriosfer\\basculaspgbackend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -21,18 +29,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{C3ECAE66-7F21-42CE-84E2-AAE9507E1A8F}|BasculasPG.csproj|c:\\users\\fer\\documents\\repositoriosfer\\basculaspgbackend\\controllers\\generalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C3ECAE66-7F21-42CE-84E2-AAE9507E1A8F}|BasculasPG.csproj|solutionrelative:controllers\\generalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C3ECAE66-7F21-42CE-84E2-AAE9507E1A8F}|BasculasPG.csproj|c:\\users\\fer\\documents\\repositoriosfer\\basculaspgbackend\\controllers\\datacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C3ECAE66-7F21-42CE-84E2-AAE9507E1A8F}|BasculasPG.csproj|solutionrelative:controllers\\datacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C3ECAE66-7F21-42CE-84E2-AAE9507E1A8F}|BasculasPG.csproj|c:\\users\\fer\\documents\\repositoriosfer\\basculaspgbackend\\handlers\\generalhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C3ECAE66-7F21-42CE-84E2-AAE9507E1A8F}|BasculasPG.csproj|solutionrelative:handlers\\generalhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C3ECAE66-7F21-42CE-84E2-AAE9507E1A8F}|BasculasPG.csproj|c:\\users\\fer\\documents\\repositoriosfer\\basculaspgbackend\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C3ECAE66-7F21-42CE-84E2-AAE9507E1A8F}|BasculasPG.csproj|solutionrelative:controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C3ECAE66-7F21-42CE-84E2-AAE9507E1A8F}|BasculasPG.csproj|c:\\users\\fer\\documents\\repositoriosfer\\basculaspgbackend\\middleware\\exceptionhandlermiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -46,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 12,
           "Children": [
             {
               "$type": "Bookmark",
@@ -86,59 +82,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MySqlDbManager.cs",
-              "DocumentMoniker": "C:\\Users\\Fer\\Documents\\RepositoriosFer\\BasculasPGBackend\\DataAccess\\MySqlDbManager.cs",
-              "RelativeDocumentMoniker": "DataAccess\\MySqlDbManager.cs",
-              "ToolTip": "C:\\Users\\Fer\\Documents\\RepositoriosFer\\BasculasPGBackend\\DataAccess\\MySqlDbManager.cs",
-              "RelativeToolTip": "DataAccess\\MySqlDbManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-06T21:57:55.149Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MySqlConnectionFactory.cs",
-              "DocumentMoniker": "C:\\Users\\Fer\\Documents\\RepositoriosFer\\BasculasPGBackend\\DataAccess\\MySqlConnectionFactory.cs",
-              "RelativeDocumentMoniker": "DataAccess\\MySqlConnectionFactory.cs",
-              "ToolTip": "C:\\Users\\Fer\\Documents\\RepositoriosFer\\BasculasPGBackend\\DataAccess\\MySqlConnectionFactory.cs",
-              "RelativeToolTip": "DataAccess\\MySqlConnectionFactory.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-06T21:57:51.689Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "DataHandler.cs",
-              "DocumentMoniker": "C:\\Users\\Fer\\Documents\\RepositoriosFer\\BasculasPGBackend\\Handlers\\DataHandler.cs",
-              "RelativeDocumentMoniker": "Handlers\\DataHandler.cs",
-              "ToolTip": "C:\\Users\\Fer\\Documents\\RepositoriosFer\\BasculasPGBackend\\Handlers\\DataHandler.cs",
-              "RelativeToolTip": "Handlers\\DataHandler.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAQwBMAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-05T19:08:42.316Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "DataController.cs",
-              "DocumentMoniker": "C:\\Users\\Fer\\Documents\\RepositoriosFer\\BasculasPGBackend\\Controllers\\DataController.cs",
-              "RelativeDocumentMoniker": "Controllers\\DataController.cs",
-              "ToolTip": "C:\\Users\\Fer\\Documents\\RepositoriosFer\\BasculasPGBackend\\Controllers\\DataController.cs",
-              "RelativeToolTip": "Controllers\\DataController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-05T19:08:08.361Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 3,
               "Title": "WeatherForecastController.cs",
               "DocumentMoniker": "C:\\Users\\Fer\\Documents\\RepositoriosFer\\BasculasPGBackend\\Controllers\\WeatherForecastController.cs",
               "RelativeDocumentMoniker": "Controllers\\WeatherForecastController.cs",
@@ -146,12 +90,64 @@
               "RelativeToolTip": "Controllers\\WeatherForecastController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-30T21:56:56.081Z",
+              "WhenOpened": "2024-10-07T05:21:13.492Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 4,
+              "Title": "Error.cs",
+              "DocumentMoniker": "C:\\Users\\Fer\\Documents\\RepositoriosFer\\BasculasPGBackend\\Models\\Entities\\Error.cs",
+              "RelativeDocumentMoniker": "Models\\Entities\\Error.cs",
+              "ToolTip": "C:\\Users\\Fer\\Documents\\RepositoriosFer\\BasculasPGBackend\\Models\\Entities\\Error.cs",
+              "RelativeToolTip": "Models\\Entities\\Error.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-07T04:47:24.307Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BasculaController.cs",
+              "DocumentMoniker": "C:\\Users\\Fer\\Documents\\RepositoriosFer\\BasculasPGBackend\\Controllers\\BasculaController.cs",
+              "RelativeDocumentMoniker": "Controllers\\BasculaController.cs",
+              "ToolTip": "C:\\Users\\Fer\\Documents\\RepositoriosFer\\BasculasPGBackend\\Controllers\\BasculaController.cs",
+              "RelativeToolTip": "Controllers\\BasculaController.cs",
+              "ViewState": "AgIAAE8AAAAAAAAAAAAgwGgAAABiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-07T04:28:35.781Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DataController.cs",
+              "DocumentMoniker": "C:\\Users\\Fer\\Documents\\RepositoriosFer\\BasculasPGBackend\\Controllers\\DataController.cs",
+              "RelativeDocumentMoniker": "Controllers\\DataController.cs",
+              "ToolTip": "C:\\Users\\Fer\\Documents\\RepositoriosFer\\BasculasPGBackend\\Controllers\\DataController.cs",
+              "RelativeToolTip": "Controllers\\DataController.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAswB4AAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-07T04:28:10.936Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DataHandler.cs",
+              "DocumentMoniker": "C:\\Users\\Fer\\Documents\\RepositoriosFer\\BasculasPGBackend\\Handlers\\DataHandler.cs",
+              "RelativeDocumentMoniker": "Handlers\\DataHandler.cs",
+              "ToolTip": "C:\\Users\\Fer\\Documents\\RepositoriosFer\\BasculasPGBackend\\Handlers\\DataHandler.cs",
+              "RelativeToolTip": "Handlers\\DataHandler.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAAACYAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-05T19:08:42.316Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "ExceptionHandlerMiddleware.cs",
               "DocumentMoniker": "C:\\Users\\Fer\\Documents\\RepositoriosFer\\BasculasPGBackend\\Middleware\\ExceptionHandlerMiddleware.cs",
               "RelativeDocumentMoniker": "Middleware\\ExceptionHandlerMiddleware.cs",
@@ -164,7 +160,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Fer\\Documents\\RepositoriosFer\\BasculasPGBackend\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -178,19 +174,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "GeneralHandler.cs",
-              "DocumentMoniker": "C:\\Users\\Fer\\Documents\\RepositoriosFer\\BasculasPGBackend\\Handlers\\GeneralHandler.cs",
-              "RelativeDocumentMoniker": "Handlers\\GeneralHandler.cs",
-              "ToolTip": "C:\\Users\\Fer\\Documents\\RepositoriosFer\\BasculasPGBackend\\Handlers\\GeneralHandler.cs",
-              "RelativeToolTip": "Handlers\\GeneralHandler.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAA3wEYAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-30T20:20:10.733Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "GeneralController.cs",
               "DocumentMoniker": "C:\\Users\\Fer\\Documents\\RepositoriosFer\\BasculasPGBackend\\Controllers\\GeneralController.cs",
               "RelativeDocumentMoniker": "Controllers\\GeneralController.cs",
