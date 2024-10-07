@@ -40,7 +40,6 @@ namespace BasculasPG.Handlers
         {
             try
             {
-                throw new Exception("Error intencional para probar el manejo de errores.");
                 string pre = guia.Substring(0, 3);
                 string num = guia.Substring(3);
 
