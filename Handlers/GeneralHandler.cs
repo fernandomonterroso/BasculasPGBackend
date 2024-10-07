@@ -30,7 +30,7 @@ namespace BasculasPG.Handlers
             try
             {
                 var result = _dbManager.DapperExecuteQuery<dynamic>(
-                    @"SELECT * FROM SAB_REGI_USER WHERE USER_GAFETE=@USER_GAFETE",
+                    @"SELECT * FROM sab_regi_user WHERE USER_GAFETE=@USER_GAFETE",
                     new { USER_GAFETE = gafete.gafete }).Result.FirstOrDefault();
 
                 if (result == null) return new RespuestaHttp(false, "Usuario no encontrado");
