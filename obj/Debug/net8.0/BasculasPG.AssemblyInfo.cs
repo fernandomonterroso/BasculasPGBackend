@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BasculasPG")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+558815dbcd64dbd8c666306ef499c1899085caac")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a6a734bf0da92b211753824211a0945899bf9de7")]
 [assembly: System.Reflection.AssemblyProductAttribute("BasculasPG")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BasculasPG")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -5,6 +5,8 @@ using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
+using BasculasPG.Models.Dapper;
+using MySql.Data.MySqlClient;
 
 namespace BasculasPG.Handlers
 {
@@ -45,7 +47,8 @@ namespace BasculasPG.Handlers
 
                 string strConsulta = $@"
                 SELECT 
-                    GUIA_PREFIJO || guia_num AS GUIA,
+                    CIA_COD,
+                    CONCAT(GUIA_PREFIJO, guia_num) AS GUIA,
                     GUIA_ANIO,
                     GUIA_CORR,
                     TIPOGUIA_COD,
@@ -74,7 +77,40 @@ namespace BasculasPG.Handlers
                 return new RespuestaHttp(false, ex.Message);
             }
         }
+        public async Task<RespuestaHttp> GetGuiaXManifiesto(string man_anio,string man_corr, string tipoguia_cod)
+        {
+            try
+            {
+                string strConsulta = $@"
+                SELECT 
+                CIA_COD,
+                CONCAT(GUIA_PREFIJO, guia_num) AS GUIA,
+                GUIA_ANIO,
+                GUIA_CORR,
+                TIPOGUIA_COD,
+                GUIA_CONSIGNATARIO,
+                GUIA_PIEZA,
+                GUIA_PESO,
+                GUIA_PESOKG,
+                GUIA_REPESOKG,
+                ESTADO_COD,
+                GUIA_ORDEN,
+                GUIA_FECHORING AS fecha,
+                IFNULL(GUIA_PIEZACF, 0) AS GUIA_PIEZACF
+                 FROM combex.cbx_guia
+                where
+                man_anio=@man_anio and man_corr=@man_corr and tipoguia_cod=@tipoguia_cod
+                ";
 
+                var parametersQuery = new { man_anio, man_corr, tipoguia_cod };
+                var result = await _dbManager.DapperExecuteQuery<dynamic>(strConsulta, parametersQuery);
+                return new RespuestaHttp(true, "EXITO", result);
+            }
+            catch (Exception ex)
+            {
+                return new RespuestaHttp(false, ex.Message);
+            }
+        }
 
         private async Task<IEnumerable<dynamic>> GetPesosGuia(int corr, int anio, string tipo)
         {
@@ -87,7 +123,9 @@ namespace BasculasPG.Handlers
                 CASE Peso_Cfrio WHEN 'S' THEN 'true' ELSE 'false' END AS Peso_Cfrio,
                 Tembalaje_Cod,
                 Peso_Pesobrutokg,
-                Peso_Pesobruto,
+                PESO_PESOBRUTOLB,
+                PESO_NETOKG,
+                PESO_TARAKG,
                 DATE_FORMAT(Peso_Fechor, '%d/%m/%Y %H:%i:%s') AS Peso_Fechor,
                 Peso_Aniocod,  
                 Peso_Codigo,
@@ -138,8 +176,8 @@ namespace BasculasPG.Handlers
 
                 if (result == null) return null;
 
-                var idSol = await GetId(corr, anio, tipo, getMaxItemPeso);
-                result.PESO_CODIGO = idSol.ToString();
+                int idSol = await GetId(corr, anio, tipo, getMaxItemPeso);
+                result.PESO_CODIGO = (object)idSol;
 
                 string strAnio = "SELECT YEAR(CURRENT_DATE()) AS ANIO";
                 var arrConsultaAnio = (await _dbManager.DapperExecuteQuery<dynamic>(strAnio, null)).FirstOrDefault();
@@ -205,7 +243,9 @@ namespace BasculasPG.Handlers
                 CASE Peso_Cfrio WHEN 'S' THEN 'true' ELSE 'false' END AS Peso_Cfrio,
                 Tembalaje_Cod,
                 Peso_Pesobrutokg,
-                Peso_Pesobruto,
+                PESO_PESOBRUTOLB,
+                PESO_NETOKG,
+                PESO_TARAKG,
                 DATE_FORMAT(Peso_Fechor, '%d/%m/%Y %H:%i:%s') AS Peso_Fechor,
                 Peso_Aniocod,  
                 Peso_Codigo,
@@ -253,6 +293,107 @@ namespace BasculasPG.Handlers
                 return new RespuestaHttp(false, e.Message);
             }
         }
+
+        public async Task<RespuestaHttp> PostPeso(PesoRequest guiaRequest)
+        {
+            try
+            {
+                int correlativoPeso = guiaRequest.InfoPeso.CORRELATIVO;
+                int index = 1;
+                Boolean guiaPrimerPeso = guiaRequest.InfoPeso.CORRELATIVO>0 ? false : true;
+
+                // Si es repeso, incrementamos el correlativo
+                if (guiaRequest.InfoInterna.repeso)
+                {
+                    correlativoPeso += 1;
+                }
+                else
+                {
+                    correlativoPeso = guiaRequest.InfoInterna.currentPage;
+                }
+
+
+                foreach (InsertDetallePeso peso in guiaRequest.pesos)
+                {
+                    var query = @"
+            INSERT INTO combex.cbx_peso (
+                CIA_COD,
+                GUIA_CORR,
+                GUIA_ANIO,
+                TIPOGUIA_COD,
+                PESO_CORR,
+                PESO_CORREQUIPO,
+                PESO_TARAKG,
+                BAS_COD,
+                PESO_PESOBRUTOKG,
+                PESO_CANTPIEZA,
+                PESO_NETOKG,
+                USER_ID,
+                PESO_PESOBRUTOLB,   
+                BAS_BODEGA,
+                PESO_FECHOR,
+                PESO_CFRIO,
+                PESO_USOBASCULA
+            ) VALUES (
+                @CIA_COD,
+                @GUIA_CORR,
+                @GUIA_ANIO,
+                @TIPOGUIA_COD,
+                @PESO_CORR,
+                (SELECT IFNULL(MAX(PESO_CORREQUIPO), 0) + 1  FROM cbx_peso p where p.guia_corr=@GUIA_CORR and p.guia_anio=@GUIA_ANIO and p.tipoguia_cod=@TIPOGUIA_COD and p.peso_corr=@index),
+                @PESO_TARAKG,
+                @BAS_COD,
+                @PESO_PESOBRUTOKG,
+                @PESO_CANTPIEZA,
+                @PESO_NETOKG,
+                @USER_ID,
+                @PESO_PESOBRUTOLB,
+                @BAS_BODEGA,
+                SYSDATE(),
+                'N',
+                'S'
+            );";
+
+                    var parameters = new
+                    {
+                        guiaRequest.guiaData.CIA_COD,
+                        guiaRequest.guiaData.GUIA_CORR,
+                        guiaRequest.guiaData.GUIA_ANIO,
+                        guiaRequest.guiaData.TIPOGUIA_COD,
+                        PESO_CORR = correlativoPeso,
+                        index = correlativoPeso,
+                        peso.PESO_CORREEQUIPO,
+                        peso.PESO_TARAKG,
+                        peso.BAS_COD,
+                        peso.PESO_PESOBRUTOKG,
+                        peso.PESO_CANTPIEZA,
+                        peso.PESO_NETOKG,
+                        peso.USER_ID,
+                        peso.PESO_PESOBRUTOLB,
+                        peso.BAS_BODEGA
+                    };
+
+                    await _dbManager.DapperExecuteCommand(query, parameters);
+                    var queryGuia = @"
+                    update cbx_guia set GUIA_PESOKG=
+                    AND Guia_Corr = @corr
+                    AND Guia_Anio = @anio
+                    AND Tipoguia_Cod = @tipo";
+                    //await _dbManager.DapperExecuteCommand(query, parameters);
+                }
+
+                return new RespuestaHttp(true, "EXITO");
+            }
+            catch (MySqlException ex)
+            {
+                return new RespuestaHttp(false, $"Error En base de datos: {ex.Message}");
+            }
+            catch (Exception ex)
+            {
+                return new RespuestaHttp(false, ex.Message);
+            }
+        }
+
 
     }
 }

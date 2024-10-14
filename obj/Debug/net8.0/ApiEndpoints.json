@@ -48,6 +48,32 @@
   },
   {
     "ContainingType": "BasculasPG.Controllers.DataController",
+    "Method": "GetGuiaXManifiesto",
+    "RelativePath": "api/Data/getGuiaXManifiesto",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "man_anio",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "man_corr",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "tipoguia_cod",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BasculasPG.Controllers.DataController",
     "Method": "GetKeysGuia",
     "RelativePath": "api/Data/getKeysGuia",
     "HttpMethod": "GET",
@@ -94,6 +120,22 @@
         "Name": "corelativoPeso",
         "Type": "System.Int32",
         "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BasculasPG.Controllers.DataController",
+    "Method": "PostPeso",
+    "RelativePath": "api/Data/PostPeso",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "guiaRequest",
+        "Type": "BasculasPG.Models.Dapper.PesoRequest",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []
