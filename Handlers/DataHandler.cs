@@ -7,6 +7,7 @@ using System.Security.Claims;
 using System.Text;
 using BasculasPG.Models.Dapper;
 using MySql.Data.MySqlClient;
+using BasculasPG.Models.Entities;
 
 namespace BasculasPG.Handlers
 {
@@ -60,7 +61,9 @@ namespace BasculasPG.Handlers
                     ESTADO_COD,
                     GUIA_ORDEN,
                     GUIA_FECHORING AS fecha,
-                    IFNULL(GUIA_PIEZACF, 0) AS GUIA_PIEZACF
+                    IFNULL(GUIA_PIEZACF, 0) AS GUIA_PIEZACF,
+                    MAN_CORR,
+                    MAN_ANIO
                 FROM cbx_guia
                 WHERE CIA_COD = 'ASO'
                 AND GUIA_PREFIJO = @pre
@@ -300,7 +303,7 @@ namespace BasculasPG.Handlers
             {
                 int correlativoPeso = guiaRequest.InfoPeso.CORRELATIVO;
                 int index = 1;
-                Boolean guiaPrimerPeso = guiaRequest.InfoPeso.CORRELATIVO>0 ? false : true;
+                bool guiaPrimerPeso = guiaRequest.InfoPeso.CORRELATIVO > 0 ? false : true;
 
                 // Si es repeso, incrementamos el correlativo
                 if (guiaRequest.InfoInterna.repeso)
@@ -312,47 +315,49 @@ namespace BasculasPG.Handlers
                     correlativoPeso = guiaRequest.InfoInterna.currentPage;
                 }
 
+                // Variable para ir sumando el valor de PESO_NETOKG
+                decimal sumaPesoNetoKg = 0;
 
                 foreach (InsertDetallePeso peso in guiaRequest.pesos)
                 {
                     var query = @"
-            INSERT INTO combex.cbx_peso (
-                CIA_COD,
-                GUIA_CORR,
-                GUIA_ANIO,
-                TIPOGUIA_COD,
-                PESO_CORR,
-                PESO_CORREQUIPO,
-                PESO_TARAKG,
-                BAS_COD,
-                PESO_PESOBRUTOKG,
-                PESO_CANTPIEZA,
-                PESO_NETOKG,
-                USER_ID,
-                PESO_PESOBRUTOLB,   
-                BAS_BODEGA,
-                PESO_FECHOR,
-                PESO_CFRIO,
-                PESO_USOBASCULA
-            ) VALUES (
-                @CIA_COD,
-                @GUIA_CORR,
-                @GUIA_ANIO,
-                @TIPOGUIA_COD,
-                @PESO_CORR,
-                (SELECT IFNULL(MAX(PESO_CORREQUIPO), 0) + 1  FROM cbx_peso p where p.guia_corr=@GUIA_CORR and p.guia_anio=@GUIA_ANIO and p.tipoguia_cod=@TIPOGUIA_COD and p.peso_corr=@index),
-                @PESO_TARAKG,
-                @BAS_COD,
-                @PESO_PESOBRUTOKG,
-                @PESO_CANTPIEZA,
-                @PESO_NETOKG,
-                @USER_ID,
-                @PESO_PESOBRUTOLB,
-                @BAS_BODEGA,
-                SYSDATE(),
-                'N',
-                'S'
-            );";
+                     INSERT INTO combex.cbx_peso (
+                         CIA_COD,
+                         GUIA_CORR,
+                         GUIA_ANIO,
+                         TIPOGUIA_COD,
+                         PESO_CORR,
+                         PESO_CORREQUIPO,
+                         PESO_TARAKG,
+                         BAS_COD,
+                         PESO_PESOBRUTOKG,
+                         PESO_CANTPIEZA,
+                         PESO_NETOKG,
+                         USER_ID,
+                         PESO_PESOBRUTOLB,   
+                         BAS_BODEGA,
+                         PESO_FECHOR,
+                         PESO_CFRIO,
+                         PESO_USOBASCULA
+                     ) VALUES (
+                         @CIA_COD,
+                         @GUIA_CORR,
+                         @GUIA_ANIO,
+                         @TIPOGUIA_COD,
+                         @PESO_CORR,
+                         (SELECT IFNULL(MAX(PESO_CORREQUIPO), 0) + 1  FROM cbx_peso p where p.guia_corr=@GUIA_CORR and p.guia_anio=@GUIA_ANIO and p.tipoguia_cod=@TIPOGUIA_COD and p.peso_corr=@index),
+                         @PESO_TARAKG,
+                         @BAS_COD,
+                         @PESO_PESOBRUTOKG,
+                         @PESO_CANTPIEZA,
+                         @PESO_NETOKG,
+                         @USER_ID,
+                         @PESO_PESOBRUTOLB,
+                         @BAS_BODEGA,
+                         SYSDATE(),
+                         'N',
+                         'S'
+                     );";
 
                     var parameters = new
                     {
@@ -374,15 +379,40 @@ namespace BasculasPG.Handlers
                     };
 
                     await _dbManager.DapperExecuteCommand(query, parameters);
-                    var queryGuia = @"
-                    update cbx_guia set GUIA_PESOKG=
-                    AND Guia_Corr = @corr
-                    AND Guia_Anio = @anio
-                    AND Tipoguia_Cod = @tipo";
-                    //await _dbManager.DapperExecuteCommand(query, parameters);
+
+                    // Sumar el peso neto actual a la variable acumuladora
+                    sumaPesoNetoKg += peso.PESO_NETOKG;
                 }
 
-                return new RespuestaHttp(true, "EXITO");
+                // Redondear el total de PESO_NETOKG a dos decimales
+                sumaPesoNetoKg = Math.Round(sumaPesoNetoKg, 2);
+
+                // Actualizar la columna en cbx_guia dependiendo de si es primer peso o repeso
+                var queryGuia = guiaPrimerPeso
+                    ? @"
+                UPDATE cbx_guia
+                SET GUIA_PESOKG = @PESO_NETOKG
+                WHERE GUIA_CORR = @GUIA_CORR
+                AND GUIA_ANIO = @GUIA_ANIO
+                AND TIPOGUIA_COD = @TIPOGUIA_COD;"
+                    : @"
+                UPDATE cbx_guia
+                SET GUIA_REPESOKG = @PESO_NETOKG
+                WHERE GUIA_CORR = @GUIA_CORR
+                AND GUIA_ANIO = @GUIA_ANIO
+                AND TIPOGUIA_COD = @TIPOGUIA_COD;";
+
+                var parametersGuia = new
+                {
+                    guiaRequest.guiaData.GUIA_CORR,
+                    guiaRequest.guiaData.GUIA_ANIO,
+                    guiaRequest.guiaData.TIPOGUIA_COD,
+                    PESO_NETOKG = sumaPesoNetoKg
+                };
+
+                await _dbManager.DapperExecuteCommand(queryGuia, parametersGuia);
+
+                return new RespuestaHttp(true, "Peso guardado correctamente.");
             }
             catch (MySqlException ex)
             {

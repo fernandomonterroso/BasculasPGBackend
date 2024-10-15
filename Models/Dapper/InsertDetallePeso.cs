@@ -10,7 +10,7 @@
         public decimal PESO_TARAKG { get; set; }
         public int USER_ID { get; set; }
         public int PESO_CORREEQUIPO { get; set; }
-        public string PESO_NETOKG { get; set; }
+        public decimal PESO_NETOKG { get; set; }
         public string BAS_BODEGA { get; set; }
         
     }
