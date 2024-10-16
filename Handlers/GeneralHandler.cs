@@ -3,6 +3,7 @@ using BasculasPG.Models;
 using BasculasPG.Models.Gafete;
 using Microsoft.IdentityModel.Tokens;
 using MySqlX.XDevAPI.Common;
+using Newtonsoft.Json;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
@@ -33,41 +34,47 @@ namespace BasculasPG.Handlers
                     @"SELECT * FROM sab_regi_user WHERE USER_GAFETE=@USER_GAFETE",
                     new { USER_GAFETE = gafete.gafete }).Result.FirstOrDefault();
 
+                _ = EnviarCorreo("elmerfer_mejor@hotmail.com", "", "Nueva solicitud de ingreso de persona:" + gafete.gafete, "prueba");
+
                 if (result == null) return new RespuestaHttp(false, "Usuario no encontrado");
 
                 var key = Encoding.ASCII.GetBytes(_configuration["JwtSettings:SecretKey"]);
                 var tokenHandler = new JwtSecurityTokenHandler();
-
-                // Crear el descriptor del token y agregar la clave personalizada
                 var tokenDescriptor = new SecurityTokenDescriptor
                 {
                     Subject = new ClaimsIdentity(new[]
                     {
-                    new Claim(ClaimTypes.Name, result.USER_USUARIO),  // Reclamo de nombre de usuario
-                    new Claim(ClaimTypes.Role, "User"),               // Reclamo de rol
-                    new Claim("CustomKey", result.USER_ID.ToString())  // Reclamo personalizado
-                }),
+                new Claim(ClaimTypes.Name, result.USER_USUARIO),
+                new Claim(ClaimTypes.Role, "User"),
+                new Claim("CustomKey", result.USER_ID.ToString())
+            }),
                     Expires = DateTime.UtcNow.AddHours(1),
                     SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature),
                     Issuer = _configuration["JwtSettings:Issuer"],
                     Audience = _configuration["JwtSettings:Audience"]
                 };
-
                 var token = tokenHandler.WriteToken(tokenHandler.CreateToken(tokenDescriptor));
 
-                // Retornar la respuesta con los datos y el token
+                
                 return new RespuestaHttp(true, "EXITO", new { data = result, token });
             }
             catch (Exception ex)
             {
                 return new RespuestaHttp(false, ex.Message);
             }
+        }
 
-            //var handler = new JwtSecurityTokenHandler();
-            //var jwtToken = handler.ReadJwtToken(tokenString);
-
-            //// Obtener el valor de la clave personalizada "CustomKey"
-            //var customKey = jwtToken.Claims.FirstOrDefault(claim => claim.Type == "CustomKey")?.Value
+        private async Task EnviarCorreo(string to, string cc, string asunto, string html)
+        {
+            var httpClient = new HttpClient();
+            var data = new
+            {
+                correo = new { to, cc, asunto, type = "8" },
+                html
+            };
+            var content = new StringContent(JsonConvert.SerializeObject(data), Encoding.UTF8, "application/json");
+            try { await httpClient.PostAsync("https://www.combexim.com.gt/consultas/module/automate/ApiController.php?FUNC=enviarCorreo", content); }
+            catch (Exception) { /* Manejo de errores opcional */ }
         }
 
     }
