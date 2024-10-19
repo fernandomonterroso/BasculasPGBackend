@@ -393,13 +393,13 @@ namespace BasculasPG.Handlers
                 var queryGuia = guiaPrimerPeso
                     ? @"
                 UPDATE cbx_guia
-                SET GUIA_PESOKG = @PESO_NETOKG
+                SET GUIA_PESOKG = @PESO_NETOKG + GUIA_PESOKG
                 WHERE GUIA_CORR = @GUIA_CORR
                 AND GUIA_ANIO = @GUIA_ANIO
                 AND TIPOGUIA_COD = @TIPOGUIA_COD;"
                     : @"
                 UPDATE cbx_guia
-                SET GUIA_REPESOKG = @PESO_NETOKG
+                SET GUIA_REPESOKG = @PESO_NETOKG + GUIA_REPESOKG
                 WHERE GUIA_CORR = @GUIA_CORR
                 AND GUIA_ANIO = @GUIA_ANIO
                 AND TIPOGUIA_COD = @TIPOGUIA_COD;";
