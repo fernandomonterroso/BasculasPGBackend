@@ -72,7 +72,9 @@ namespace BasculasPG.Handlers
 
                 var parametersQuery = new { pre, num, bodega };
                 var result = (await _dbManager.DapperExecuteQuery<dynamic>(strConsulta, parametersQuery)).FirstOrDefault();
-
+                if (result is null) {
+                    return new RespuestaHttp(false, "No existe la guia consultada. Revise la etiqueta.");
+                }
                 return new RespuestaHttp(true, "EXITO", result);
             }
             catch (Exception ex)

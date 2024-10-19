@@ -3,30 +3,26 @@
   "WorkspaceRootPath": "C:\\Users\\Fer\\Documents\\RepositoriosFer\\BasculasPGBackend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C3ECAE66-7F21-42CE-84E2-AAE9507E1A8F}|BasculasPG.csproj|c:\\users\\fer\\documents\\repositoriosfer\\basculaspgbackend\\handlers\\generalhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C3ECAE66-7F21-42CE-84E2-AAE9507E1A8F}|BasculasPG.csproj|solutionrelative:handlers\\generalhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C3ECAE66-7F21-42CE-84E2-AAE9507E1A8F}|BasculasPG.csproj|c:\\users\\fer\\documents\\repositoriosfer\\basculaspgbackend\\handlers\\datahandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3ECAE66-7F21-42CE-84E2-AAE9507E1A8F}|BasculasPG.csproj|solutionrelative:handlers\\datahandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3ECAE66-7F21-42CE-84E2-AAE9507E1A8F}|BasculasPG.csproj|c:\\users\\fer\\documents\\repositoriosfer\\basculaspgbackend\\controllers\\datacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3ECAE66-7F21-42CE-84E2-AAE9507E1A8F}|BasculasPG.csproj|solutionrelative:controllers\\datacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C3ECAE66-7F21-42CE-84E2-AAE9507E1A8F}|BasculasPG.csproj|c:\\users\\fer\\documents\\repositoriosfer\\basculaspgbackend\\controllers\\basculacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C3ECAE66-7F21-42CE-84E2-AAE9507E1A8F}|BasculasPG.csproj|solutionrelative:controllers\\basculacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{C3ECAE66-7F21-42CE-84E2-AAE9507E1A8F}|BasculasPG.csproj|c:\\users\\fer\\documents\\repositoriosfer\\basculaspgbackend\\handlers\\generalhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3ECAE66-7F21-42CE-84E2-AAE9507E1A8F}|BasculasPG.csproj|solutionrelative:handlers\\generalhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Fer\\Documents\\RepositoriosSLC\\tradein-backend\\DataAccess\\Service\\InvoiceService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Fer\\Documents\\RepositoriosSLC\\tradein-backend\\TradeIn\\Helper\\GenerateSap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C3ECAE66-7F21-42CE-84E2-AAE9507E1A8F}|BasculasPG.csproj|c:\\users\\fer\\documents\\repositoriosfer\\basculaspgbackend\\handlers\\datahandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C3ECAE66-7F21-42CE-84E2-AAE9507E1A8F}|BasculasPG.csproj|solutionrelative:handlers\\datahandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C3ECAE66-7F21-42CE-84E2-AAE9507E1A8F}|BasculasPG.csproj|c:\\users\\fer\\documents\\repositoriosfer\\basculaspgbackend\\models\\dapper\\insertdetallepeso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C3ECAE66-7F21-42CE-84E2-AAE9507E1A8F}|BasculasPG.csproj|solutionrelative:models\\dapper\\insertdetallepeso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C3ECAE66-7F21-42CE-84E2-AAE9507E1A8F}|BasculasPG.csproj|c:\\users\\fer\\documents\\repositoriosfer\\basculaspgbackend\\controllers\\datacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C3ECAE66-7F21-42CE-84E2-AAE9507E1A8F}|BasculasPG.csproj|solutionrelative:controllers\\datacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C3ECAE66-7F21-42CE-84E2-AAE9507E1A8F}|BasculasPG.csproj|c:\\users\\fer\\documents\\repositoriosfer\\basculaspgbackend\\dataaccess\\mysqlconnectionfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -57,10 +53,6 @@
       "RelativeMoniker": "D:0:0:{C3ECAE66-7F21-42CE-84E2-AAE9507E1A8F}|BasculasPG.csproj|solutionrelative:controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C3ECAE66-7F21-42CE-84E2-AAE9507E1A8F}|BasculasPG.csproj|c:\\users\\fer\\documents\\repositoriosfer\\basculaspgbackend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{C3ECAE66-7F21-42CE-84E2-AAE9507E1A8F}|BasculasPG.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C3ECAE66-7F21-42CE-84E2-AAE9507E1A8F}|BasculasPG.csproj|c:\\users\\fer\\documents\\repositoriosfer\\basculaspgbackend\\models\\dapper\\insertinfoguia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C3ECAE66-7F21-42CE-84E2-AAE9507E1A8F}|BasculasPG.csproj|solutionrelative:models\\dapper\\insertinfoguia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -80,7 +72,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 18,
+          "SelectedChildIndex": 15,
           "Children": [
             {
               "$type": "Bookmark",
@@ -120,7 +112,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "InvoiceService.cs",
               "DocumentMoniker": "C:\\Users\\Fer\\Documents\\RepositoriosSLC\\tradein-backend\\DataAccess\\Service\\InvoiceService.cs",
               "RelativeDocumentMoniker": "..\\..\\RepositoriosSLC\\tradein-backend\\DataAccess\\Service\\InvoiceService.cs",
@@ -128,12 +120,11 @@
               "RelativeToolTip": "..\\..\\RepositoriosSLC\\tradein-backend\\DataAccess\\Service\\InvoiceService.cs",
               "ViewState": "AgIAAA8AAAAAAAAAAAAAAFYAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-15T21:56:43.384Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-15T21:56:43.384Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "GenerateSap.cs",
               "DocumentMoniker": "C:\\Users\\Fer\\Documents\\RepositoriosSLC\\tradein-backend\\TradeIn\\Helper\\GenerateSap.cs",
               "RelativeDocumentMoniker": "..\\..\\RepositoriosSLC\\tradein-backend\\TradeIn\\Helper\\GenerateSap.cs",
@@ -145,7 +136,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 6,
               "Title": "MySqlConnectionFactory.cs",
               "DocumentMoniker": "C:\\Users\\Fer\\Documents\\RepositoriosFer\\BasculasPGBackend\\DataAccess\\MySqlConnectionFactory.cs",
               "RelativeDocumentMoniker": "DataAccess\\MySqlConnectionFactory.cs",
@@ -157,31 +148,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "InsertDetallePeso.cs",
-              "DocumentMoniker": "C:\\Users\\Fer\\Documents\\RepositoriosFer\\BasculasPGBackend\\Models\\Dapper\\InsertDetallePeso.cs",
-              "RelativeDocumentMoniker": "Models\\Dapper\\InsertDetallePeso.cs",
-              "ToolTip": "C:\\Users\\Fer\\Documents\\RepositoriosFer\\BasculasPGBackend\\Models\\Dapper\\InsertDetallePeso.cs",
-              "RelativeToolTip": "Models\\Dapper\\InsertDetallePeso.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-08T07:47:40.658Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\Fer\\Documents\\RepositoriosFer\\BasculasPGBackend\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\Users\\Fer\\Documents\\RepositoriosFer\\BasculasPGBackend\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA7AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-10-07T15:08:06.664Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 12,
               "Title": "WeatherForecastController.cs",
               "DocumentMoniker": "C:\\Users\\Fer\\Documents\\RepositoriosFer\\BasculasPGBackend\\Controllers\\WeatherForecastController.cs",
               "RelativeDocumentMoniker": "Controllers\\WeatherForecastController.cs",
@@ -193,7 +160,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 11,
               "Title": "Error.cs",
               "DocumentMoniker": "C:\\Users\\Fer\\Documents\\RepositoriosFer\\BasculasPGBackend\\Models\\Entities\\Error.cs",
               "RelativeDocumentMoniker": "Models\\Entities\\Error.cs",
@@ -205,57 +172,59 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "BasculaController.cs",
               "DocumentMoniker": "C:\\Users\\Fer\\Documents\\RepositoriosFer\\BasculasPGBackend\\Controllers\\BasculaController.cs",
               "RelativeDocumentMoniker": "Controllers\\BasculaController.cs",
               "ToolTip": "C:\\Users\\Fer\\Documents\\RepositoriosFer\\BasculasPGBackend\\Controllers\\BasculaController.cs",
               "RelativeToolTip": "Controllers\\BasculaController.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAgwE4AAAAZAAAAAAAAAA==",
+              "ViewState": "AgIAABkAAAAAAAAAAAAgwCoAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-07T04:28:35.781Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "DataHandler.cs",
               "DocumentMoniker": "C:\\Users\\Fer\\Documents\\RepositoriosFer\\BasculasPGBackend\\Handlers\\DataHandler.cs",
               "RelativeDocumentMoniker": "Handlers\\DataHandler.cs",
-              "ToolTip": "C:\\Users\\Fer\\Documents\\RepositoriosFer\\BasculasPGBackend\\Handlers\\DataHandler.cs",
-              "RelativeToolTip": "Handlers\\DataHandler.cs",
-              "ViewState": "AgIAAIoBAAAAAAAAAADwv5cBAAAzAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\Fer\\Documents\\RepositoriosFer\\BasculasPGBackend\\Handlers\\DataHandler.cs*",
+              "RelativeToolTip": "Handlers\\DataHandler.cs*",
+              "ViewState": "AgIAADwAAAAAAAAAAAAAAEsAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-05T19:08:42.316Z"
+              "WhenOpened": "2024-10-05T19:08:42.316Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "GeneralHandler.cs",
               "DocumentMoniker": "C:\\Users\\Fer\\Documents\\RepositoriosFer\\BasculasPGBackend\\Handlers\\GeneralHandler.cs",
               "RelativeDocumentMoniker": "Handlers\\GeneralHandler.cs",
               "ToolTip": "C:\\Users\\Fer\\Documents\\RepositoriosFer\\BasculasPGBackend\\Handlers\\GeneralHandler.cs",
               "RelativeToolTip": "Handlers\\GeneralHandler.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAAwwDsAAAA8AAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAB0AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-07T17:55:27.225Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 1,
               "Title": "DataController.cs",
               "DocumentMoniker": "C:\\Users\\Fer\\Documents\\RepositoriosFer\\BasculasPGBackend\\Controllers\\DataController.cs",
               "RelativeDocumentMoniker": "Controllers\\DataController.cs",
               "ToolTip": "C:\\Users\\Fer\\Documents\\RepositoriosFer\\BasculasPGBackend\\Controllers\\DataController.cs",
               "RelativeToolTip": "Controllers\\DataController.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAuwBcAAAA9AAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAiwB4AAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-07T04:28:10.936Z"
+              "WhenOpened": "2024-10-07T04:28:10.936Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 9,
               "Title": "InfoInterna.cs",
               "DocumentMoniker": "C:\\Users\\Fer\\Documents\\RepositoriosFer\\BasculasPGBackend\\Models\\Dapper\\InfoInterna.cs",
               "RelativeDocumentMoniker": "Models\\Dapper\\InfoInterna.cs",
@@ -267,7 +236,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 8,
               "Title": "GeneralController.cs",
               "DocumentMoniker": "C:\\Users\\Fer\\Documents\\RepositoriosFer\\BasculasPGBackend\\Controllers\\GeneralController.cs",
               "RelativeDocumentMoniker": "Controllers\\GeneralController.cs",
@@ -279,7 +248,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 7,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Fer\\Documents\\RepositoriosFer\\BasculasPGBackend\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -291,7 +260,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 10,
               "Title": "PesoRequest.cs",
               "DocumentMoniker": "C:\\Users\\Fer\\Documents\\RepositoriosFer\\BasculasPGBackend\\Models\\Dapper\\PesoRequest.cs",
               "RelativeDocumentMoniker": "Models\\Dapper\\PesoRequest.cs",
@@ -303,7 +272,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 13,
               "Title": "InsertInfoGuia.cs",
               "DocumentMoniker": "C:\\Users\\Fer\\Documents\\RepositoriosFer\\BasculasPGBackend\\Models\\Dapper\\InsertInfoGuia.cs",
               "RelativeDocumentMoniker": "Models\\Dapper\\InsertInfoGuia.cs",
@@ -315,7 +284,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 14,
               "Title": "InfoPeso.cs",
               "DocumentMoniker": "C:\\Users\\Fer\\Documents\\RepositoriosFer\\BasculasPGBackend\\Models\\Dapper\\InfoPeso.cs",
               "RelativeDocumentMoniker": "Models\\Dapper\\InfoPeso.cs",
@@ -327,7 +296,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 15,
               "Title": "ExceptionHandlerMiddleware.cs",
               "DocumentMoniker": "C:\\Users\\Fer\\Documents\\RepositoriosFer\\BasculasPGBackend\\Middleware\\ExceptionHandlerMiddleware.cs",
               "RelativeDocumentMoniker": "Middleware\\ExceptionHandlerMiddleware.cs",
