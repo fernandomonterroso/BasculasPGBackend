@@ -322,6 +322,20 @@ namespace BasculasPG.Handlers
 
                 foreach (InsertDetallePeso peso in guiaRequest.pesos)
                 {
+
+                    if (peso.PESO_TARAKG < 0)
+                    {
+                        return new RespuestaHttp(false, "Se detecto una tara negativa.");
+                    }
+                    else if (peso.PESO_NETOKG == 0)
+                    {
+                        return new RespuestaHttp(false, "Se detecto un invalido.");
+                    }
+                    else if (peso.PESO_NETOKG < 0)
+                    {
+                        return new RespuestaHttp(false, "Se detecto un peso negativo.");
+                    }
+
                     var query = @"
                      INSERT INTO combex.cbx_peso (
                          CIA_COD,
